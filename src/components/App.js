@@ -1,11 +1,18 @@
-import React from 'react';
-import '../css/App.css';
+import Aside from '../containers/Aside';
+import LoginContainer from  '../containers/Login-container';
+import React, {Fragment} from 'react';
+import '../css/App.scss';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    </div>
+    <Fragment>
+      <h1 className='header_info'>Best pizza website</h1>
+      <Aside />
+      <section>
+        <LoginContainer />
+      </section>
+    </Fragment>
   );
-}
+};
 
 export default App;
