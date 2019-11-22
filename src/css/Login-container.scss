@@ -1,0 +1,10 @@
+.login_container {
+    display: grid;
+    grid-area: login;
+    grid-template-areas:
+        ". trade . "
+        ". input . "
+        ". link . "
+        ". button . ";
+    grid-template-columns: 1fr 3fr 1fr;
+}
