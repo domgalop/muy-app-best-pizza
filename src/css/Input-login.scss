@@ -1,3 +1,42 @@
-.input_button {
+@import '../utils/base/base.scss';
+
+.input__field__container {
     grid-area: input;
+    margin: 1em ;
+    position: relative;
+
+    &__icon {
+        &--user {
+            right: 1em;
+            top: 1.25em;
+        }
+
+        &--password {
+            right: 1em;
+            top: 5.2em;
+        }
+    }
+
+    &__text {
+        border-radius: .2em;
+        border: .1em grey solid;
+        margin: .5em 0;
+        padding: 1.2em;
+        width: 100%;
+    }
+
+    &__container > input:placeholder {
+        color: grey;
+    }
+}
+
+.icon {
+    border-radius: 50%;
+    height: 1.5em;
+    position: absolute;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border: 1px solid $base-yellow;
 }

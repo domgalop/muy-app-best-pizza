@@ -1,3 +1,11 @@
+@import '../utils/base/base.scss';
+
 .login_button {
+    background-color: $base-yellow;
+    border-radius: .2em;
+    border: none;
+    box-shadow: -1px 3px 4px #b3dddd;
+    font-weight: 500;
+    font-weight: bold;
     grid-area: button;
 }

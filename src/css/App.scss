@@ -10,9 +10,14 @@
     grid-template-columns: 42% 58%;
     height: 100vh;
 
-    @media (max-width: $smartphone) {
+    @media (max-width: $mid-screen) {
         display: grid;
         grid-template-areas: "login";
         grid-template-columns: 100%;
+    }
+
+    @media (min-width: $extra-large-screen) {
+        width: 80%;
+        margin: 0 auto;
     }
 }

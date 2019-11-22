@@ -3,7 +3,7 @@ import '../css/Password-recovery.scss';
 
 const getAnchorProps = () => {
   return {
-    className:'recovery',
+    className:'recovery__link',
     href: '#'
   };
 };

@@ -20,7 +20,7 @@ const getAsideProps = () => {
 const getImageProps = () => {
   return {
     alt: '',
-    className:'aside_image',
+    className:'aside__image',
     src: pizzaImage
   };
 };
