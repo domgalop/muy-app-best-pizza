@@ -1,11 +1,19 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
+import '../css/Password-recovery.scss';
 
-const passwordRecovery = () => {
+const getAnchorProps = () => {
+  return {
+    className:'recovery',
+    href: '#'
+  };
+};
+
+const PasswordRecovery = () => {
   return (
     <Fragment>
-        <a href="#">¿Olvidaste tu contraseña?</a>
+        <a {...getAnchorProps()}>¿Olvidaste tu contraseña?</a>
     </Fragment>
   );
 };
 
-export default passwordRecovery;
+export default PasswordRecovery;

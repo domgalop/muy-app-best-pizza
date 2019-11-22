@@ -1,15 +1,22 @@
 import logo from '../assets/logo.png';
 import React from 'react';
-import '../css/CorporateTrade.scss';
+import '../css/Corporate-trade.scss';
 
 const CorporateTrade = () => {
   return (
-    <article>
-        <img src={logo} alt="Best pizza logo"/>
+    <div className='corporate_trade'>
+        <img {...getImageProps()}/>
         <h2>Bienvenido</h2>
         <p>A las mejores pizzas del país</p>
-    </article>
+    </div>
   );
+};
+
+const getImageProps = () => {
+  return {
+    alt: 'Best pizza logo',
+    src: logo
+  };
 };
 
 export default CorporateTrade;

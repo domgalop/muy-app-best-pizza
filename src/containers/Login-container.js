@@ -1,17 +1,18 @@
 import CorporateTrade from  './Corporate-trade';
 import LoginButton from  '../components/Login-button';
 import LoginInput from  '../components/Input-login';
-import React, {Fragment} from 'react';
-import RecoveryLink from  '../components/password-recovery';
+import React from 'react';
+import RecoveryLink from  '../components/Password-recovery';
+import '../css/Login-container.scss'
 
 const LoginContainer = () => {
   return (
-    <Fragment>
+    <section className='login_container'>
         <CorporateTrade />
         <LoginInput />
         <RecoveryLink />
         <LoginButton />
-    </Fragment>
+    </section>
   );
 };
 

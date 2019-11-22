@@ -1,12 +1,13 @@
-import React, {Fragment , Component} from 'react';
+import React, { Component } from 'react';
+import '../css/Input-login.scss';
 
 class InputLogin extends Component {
     render () {
         return (
-            <Fragment>
+            <div className='input_button'>
+                <input type="text" />
                 <input type="text"/>
-                <input type="text"/>
-            </Fragment>
+            </div>
         );
     };
 };
