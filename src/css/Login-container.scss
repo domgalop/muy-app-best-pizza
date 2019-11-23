@@ -6,12 +6,13 @@
     grid-template-areas:
         ". . . "
         ". trade . "
+        ". pageNotication ."
         ". input . "
         ". link . "
         ". button . "
         ". . . ";
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 10% 2fr 1fr .3fr .5fr 5%;
+    grid-template-rows: 10% 1fr .1fr .6fr .3fr .4fr 5%;
     height: 100vh;
 
     @media (max-width: $small-screen) {

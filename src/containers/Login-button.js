@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { checkUser } from '../store/actions/actions';
 import '../css/Login-button.scss';

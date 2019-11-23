@@ -1,8 +1,9 @@
 import CorporateTrade from  './Corporate-trade';
-import LoginButton from  '../components/Login-button';
+import LoginButton from  './Login-button';
 import LoginInput from  '../components/Input-login';
 import React from 'react';
-import RecoveryLink from  '../components/Password-recovery';
+import PageNotication from './Page-notication';
+import PasswordRecovery from  '../components/Password-recovery';
 import '../css/Login-container.scss'
 
 const LoginContainer = () => {
@@ -10,7 +11,8 @@ const LoginContainer = () => {
     <section className='login_container'>
         <CorporateTrade />
         <LoginInput />
-        <RecoveryLink />
+        <PageNotication />
+        <PasswordRecovery />
         <LoginButton />
     </section>
   );

@@ -8,7 +8,7 @@ const initialState = {
     },
     storesData: [],
     users: [],
-    validUser: false
+    validUser: null
 };
 
 const validUser = state => {
