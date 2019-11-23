@@ -12,9 +12,9 @@ const getButtonProps = props => {
 
 const LoginButton = props => {
     return (
-        <Fragment>
+        <div className='login_button_container'>
             <button {...getButtonProps(props)}>Iniciar sesión</button>
-        </Fragment>
+        </div>
     );
 };
 

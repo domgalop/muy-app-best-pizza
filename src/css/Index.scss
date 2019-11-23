@@ -12,3 +12,11 @@ body {
 * {
     box-sizing: border-box;
 }
+
+label, legend {
+    display: none;
+}
+
+fieldset {
+    border: none;
+}

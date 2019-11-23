@@ -5,7 +5,16 @@
     border-radius: .2em;
     border: none;
     box-shadow: -1px 3px 4px #b3dddd;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-weight: bold;
     grid-area: button;
+    height: 80%;
+    width: 90%;
+
+    &_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: button;
+    }
 }
