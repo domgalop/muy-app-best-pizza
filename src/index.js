@@ -1,5 +1,5 @@
 import App from './components/App';
-import pizzaReducer from './store/reducers/pizza-reducer';
+import pizzaReducer from './store/reducers/pizza-store-reducer';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import thunk from 'redux-thunk';

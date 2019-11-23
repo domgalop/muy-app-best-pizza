@@ -1,14 +1,28 @@
-import React, { Fragment , Component } from 'react';
+import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import { checkUser } from '../store/actions/actions';
 import '../css/Login-button.scss';
 
-class LoginButton extends Component {
-    render () {
-        return (
-            <Fragment>
-                <button className='login_button'>Iniciar sesión</button>
-            </Fragment>
-        );
-    };
+const getButtonProps = props => {
+    return {
+        className: 'login_button',
+        onClick: props.checkUser
+    }
 };
 
-export default LoginButton;
+const LoginButton = props => {
+    return (
+        <Fragment>
+            <button {...getButtonProps(props)}>Iniciar sesión</button>
+        </Fragment>
+    );
+};
+
+const mapDispatchToProps = {
+    checkUser
+};
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(LoginButton);
