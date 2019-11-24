@@ -1,0 +1,29 @@
+@import '../utils/base/base.scss';
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $base-footer;
+    grid-area: footer;
+    height: 100%;
+
+    &__logo {
+        margin-right: 9.2em;
+        object-fit: contain;
+        width: 7%;
+    }
+}
+
+.fab {
+    margin-top: .8em;
+    font-size: 2.1em;
+    color: white;
+}
+
+.fa-facebook-square {
+    margin-left: 2.2em;
+}
+
+.fa-instagram {
+    margin-left: .5em;
+}
