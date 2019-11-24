@@ -23,6 +23,13 @@ export const checkUser = () => {
     };
 };
 
+export const clearUser = () => {
+    return {
+        authUser: false,
+        type: actionTypes.CLEAR_USER
+    };
+};
+
 export const getInputUser = e => {
     return {
         pizzaStoreData: e.target.value,

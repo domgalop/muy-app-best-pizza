@@ -1,6 +1,5 @@
 import CardInfo from './Card-info';
 import React from 'react';
-import '../css/Stores-container.sass';
 
 const StoreContainer = props => {
   return (

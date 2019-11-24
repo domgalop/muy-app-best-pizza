@@ -10,15 +10,15 @@
     }
 
     &__phrase {
-        text-align: center;
         color: grey;
         font-size: 130%;
         margin: 0;
+        text-align: center;
     }
 
     &__welcome {
-        font-weight: 500;
         font-size: 250%;
+        font-weight: 500;
         margin: 3% 0;
     }
 }

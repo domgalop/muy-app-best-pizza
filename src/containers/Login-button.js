@@ -17,7 +17,7 @@ class InputLogin extends Component {
         this.props.checkUser();
         this.props.routerPush.push('/select/');
         this.props.changeShowIconLogo();
-    }
+    };
 };
 
 const mapDispatchToProps = {

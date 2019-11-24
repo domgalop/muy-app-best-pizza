@@ -2,6 +2,8 @@ import Footer from '../containers/Footer';
 import React, { Component } from 'react';
 import StoresContainer from '../containers/Stores-container';
 import storeInfo from '../utils/storesInfo/stores-info';
+import { clearUser } from '../store/actions/actions'
+import { connect } from 'react-redux';
 import '../css/Select-pizza-page.scss';
 
 class SelectPagePizza extends Component  {
@@ -9,7 +11,7 @@ class SelectPagePizza extends Component  {
     state = {
         storeInfo: storeInfo,
         filteredStores: []
-    }
+    };
 
     componentDidMount (){
         this.setState({
@@ -41,8 +43,8 @@ class SelectPagePizza extends Component  {
             className: 'search__store',
             onChange: e => this.filterStores(e),
             placeholder: 'Pizzerías'
-        }
-    }
+        };
+    };
 
     getButtonProps = () => {
         return {
@@ -55,11 +57,12 @@ class SelectPagePizza extends Component  {
         return {
             className: 'select__page__stores__container',
             storeInfo: this.state.filteredStores
-        }
-    }
+        };
+    };
 
     redirectToLogin = () => {
-        this.props.history.push('/login/')
+        this.props.clearUser();
+        this.props.history.push('/login/');
     };
 
     filterStores = e => {
@@ -78,7 +81,14 @@ class SelectPagePizza extends Component  {
         this.setState({
             filteredStores: selectStore
         });
-    }
+    };
 };
 
-export default SelectPagePizza;
+const mapDispatchToProps = {
+    clearUser
+};
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(SelectPagePizza);

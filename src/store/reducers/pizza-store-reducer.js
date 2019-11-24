@@ -35,6 +35,17 @@ const addData = (action, state) => {
     };
 };
 
+const clearUser = (action, state) => {
+    return {
+        ...state,
+        inputUser: {
+            name: '',
+            password: ''
+        },
+        validUser: action.authUser
+    };
+};
+
 const getInputPassword = (action, state) => {
     return {
         ...state,
@@ -67,6 +78,8 @@ const reducer = (state = initialState, action) => {
         return addData(action, state);
     case actionType.CHECK_USER:
         return validUser(state);
+    case actionType.CLEAR_USER:
+        return clearUser(action, state);
     case actionType.GET_INPUT_PASSWORD:
         return getInputPassword(action, state);
     case actionType.GET_INPUT_USER:

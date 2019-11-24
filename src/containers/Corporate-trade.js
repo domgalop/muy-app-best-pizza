@@ -1,5 +1,5 @@
-import logo from '../assets/login-Best-Pizza.png';
 import React from 'react';
+import logo from '../assets/login-Best-Pizza.png';
 import '../css/Corporate-trade.scss';
 
 const CorporateTrade = () => {
