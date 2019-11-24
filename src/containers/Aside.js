@@ -2,6 +2,7 @@ import React from 'react';
 import logoBestPizza from '../assets/logo.png';
 import pizzaImage from '../assets/pizza.png';
 import '../css/Aside.scss';
+import { withRouter } from 'react-router-dom';
 
 const Aside = props => {
   return (
@@ -15,7 +16,7 @@ const Aside = props => {
 const renderIconLog = props => {
   let component = null;
 
-  if (props.showIconLogo) {
+  if (props.showIconLogo && props.location.pathname === '/select/') {
     component = (
       <img {...getLogoProps()}/>
     );
@@ -47,4 +48,4 @@ const getAsideImageProps = () => {
   };
 };
 
-export default Aside;
+export default withRouter(Aside);
