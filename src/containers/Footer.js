@@ -1,12 +1,15 @@
 import React from 'react';
-import '../css/Corporate-trade.scss';
+import BestPizza from '../assets/Best-Pizza.png';
+import '../css/Footer.scss';
 
 const Footer = () => {
   return (
-    <footer >
-      <img src='' alt=''/>
-      <img src='' alt=''/>
-      <img src='' alt=''/>
+    <footer className='footer'>
+      <span>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-instagram"></i>
+      </span>
+      <img src={BestPizza} alt=''className='footer__logo'/>
     </footer>
   );
 };

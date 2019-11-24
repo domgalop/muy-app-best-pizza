@@ -3,6 +3,11 @@
     width: 80%;
 
     &__image {
+        transition: 0.2s linear;
         width: 100%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
