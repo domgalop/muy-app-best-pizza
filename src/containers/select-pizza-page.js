@@ -1,20 +1,19 @@
+import Footer from './Footer';
 import React from 'react';
-import { connect } from 'react-redux';
-import { checkUser } from '../store/actions/actions';
+import StoresContainer from './Stores-container';
 import '../css/Select-pizza-page.scss';
 
-const LoginButton = props => {
+const SelectPagePizza = () => {
     return (
-        <div className='select__page'>
-        </div>
+        <section className='select__page'>
+            <button>Salir</button>
+            <h2>Pizzería</h2>
+            <h3>Tiendas</h3>
+            <p>Escoge Tu pizzería favorita</p>
+            <StoresContainer />
+            <Footer />
+        </section>
     );
 };
 
-const mapDispatchToProps = {
-    checkUser
-};
-
-export default connect(
-    null,
-    mapDispatchToProps
-)(LoginButton);
+export default SelectPagePizza;
