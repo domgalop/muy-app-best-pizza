@@ -3,7 +3,7 @@ import LoginContainer from  '../containers/Login-container';
 import PrivateRoute from '../containers/Private-route'
 import React, { Component, Fragment } from 'react';
 import SelectPizzaPage from '../containers/select-pizza-page'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchData } from '../store/actions/actions';
 import '../css/App.scss';
@@ -27,6 +27,7 @@ class App extends Component {
           </header>
           <main className='wrapper'>
             <Aside showIconLogo={this.state.showIconLogo} />
+            <Redirect from='/' to='/login' />
             <Switch>
               <Route exact path='/login' render={this.renderSelectPage()} />
               <PrivateRoute>
