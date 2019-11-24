@@ -6,11 +6,15 @@ import '../css/Select-pizza-page.scss';
 const SelectPagePizza = () => {
     return (
         <section className='select__page'>
-            <button>Salir</button>
-            <h2>Pizzería</h2>
-            <h3>Tiendas</h3>
-            <p>Escoge Tu pizzería favorita</p>
-            <StoresContainer />
+            <div className='select__page__exit'>
+                <button >Salir</button>
+            </div>
+            <h2 className='select__page__title'>Pizzerías</h2>
+            <div className='select__page__info'>
+                <h3>Tiendas</h3>
+                <p>Escoge Tu pizzería favorita</p>
+            </div>
+            <StoresContainer className='select__page__stores__container'/>
             <Footer />
         </section>
     );

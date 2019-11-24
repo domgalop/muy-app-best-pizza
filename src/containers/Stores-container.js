@@ -5,7 +5,7 @@ import '../css/Stores-container.sass';
 
 const StoreContainer = props => {
   return (
-    <div className='stores__container'>
+    <div className={props.className}>
         {renderStoresContainer(storeInfo)}
     </div>
   );
@@ -21,7 +21,7 @@ const renderStoresContainer = store => {
 const getCardInfoProps = cardInfoProps => {
   return {
     image: cardInfoProps.logo,
-    key: Math.floor(Math.random()*(200)),
+    key: Math.floor(Math.random()*(999-100+1)+100),
     text: cardInfoProps.address,
     title: cardInfoProps.storeName
   };

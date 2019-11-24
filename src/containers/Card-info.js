@@ -1,11 +1,11 @@
 import React from 'react';
-import '../css/Stores-container.sass';
+import '../css/Card-info.scss';
 
 const CardInfo = props => {
     return (
-        <div className=''>
-            <img src={props.image} alt={props.title}/>
-            <h3 className=''>{props.title}</h3>
+        <div className='card__info'>
+            <img src={props.image} alt={props.title} className='card__info__image'/>
+            <h3>{props.title}</h3>
             <p className=''>{props.text}</p>
         </div>
     );
