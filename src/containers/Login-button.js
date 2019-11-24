@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { checkUser } from '../store/actions/actions';
 import '../css/Login-button.scss';
+class InputLogin extends Component {
 
-const getButtonProps = props => {
-    return {
-        className: 'login_button',
-        onClick: props.checkUser
+    render() {
+        return (
+            <div className='login_button_container'>
+                <button className='login_button' onClick={this.navigateToSelectPage.bind(this)}>Iniciar sesión</button>
+            </div>
+        );
+    };
+
+    navigateToSelectPage() {
+        this.props.checkUser();
+        this.props.routerPush.push('/select/');
     }
-};
-
-const LoginButton = props => {
-    return (
-        <div className='login_button_container'>
-            <button {...getButtonProps(props)}>Iniciar sesión</button>
-        </div>
-    );
 };
 
 const mapDispatchToProps = {
@@ -25,4 +25,4 @@ const mapDispatchToProps = {
 export default connect(
     null,
     mapDispatchToProps
-)(LoginButton);
+)(InputLogin);

@@ -8,7 +8,7 @@ const renderNofication = data => {
     if (!data && data !== null) {
         component = (
             <Fragment>
-                <p className='page__notification__text'>Ups... Usuario o contraseña Errada !!</p>
+                <p className='page__notification__text'>Ups... Usuario o contraseña errada !!</p>
             </Fragment>
         )
     }

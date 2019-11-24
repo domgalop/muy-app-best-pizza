@@ -3,17 +3,17 @@ import LoginButton from  './Login-button';
 import LoginInput from  '../components/Input-login';
 import React from 'react';
 import PageNotication from './Page-notication';
-import PasswordRecovery from  '../components/Password-recovery';
+import PasswordRecovery from  './Password-recovery';
 import '../css/Login-container.scss'
 
-const LoginContainer = () => {
+const LoginContainer = props => {
   return (
     <section className='login_container'>
         <CorporateTrade />
         <LoginInput />
         <PageNotication />
         <PasswordRecovery />
-        <LoginButton />
+        <LoginButton routerPush={props.history}/>
     </section>
   );
 };

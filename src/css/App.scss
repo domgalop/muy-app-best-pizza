@@ -6,13 +6,13 @@
 
 .wrapper {
     display: grid;
-    grid-template-areas: "aside login";
+    grid-template-areas: "aside page";
     grid-template-columns: 42% 58%;
     height: 100vh;
 
     @media (max-width: $mid-screen) {
         display: grid;
-        grid-template-areas: "login";
+        grid-template-areas: "page";
         grid-template-columns: 100%;
     }
 

@@ -18,10 +18,10 @@ class InputLogin extends Component {
                 <img src={iconPassword} className='input__field__container__icon--password icon' aria-hidden='true' alt=''/>
                 <fieldset>
                     <legend>Ingrese sus datos personales para Iniciar sesión</legend>
-                    <label for="userName">Ingresa tu nombre</label>
-                    <input type="text" {...this.getUserProps()} required/>
-                    <label for="password">Ingresa tu Contraseña</label>
-                    <input type="password" {...this.getPasswordClassName()} required/>
+                    <label for='userName'>Ingresa tu nombre</label>
+                    <input type='text' {...this.getUserProps()} required/>
+                    <label for='password'>Ingresa tu Contraseña</label>
+                    <input type='password' {...this.getPasswordClassName()} required/>
                 </fieldset>
             </div>
         );
@@ -29,7 +29,7 @@ class InputLogin extends Component {
 
     getUserProps() {
         return {
-            'aria-required':"true",
+            'aria-required':'true',
             className: this.state.inputContainer,
             id: 'name',
             name: 'userName',
@@ -40,7 +40,7 @@ class InputLogin extends Component {
 
     getPasswordClassName() {
         return {
-            'aria-required':"true",
+            'aria-required':'true',
             className: this.state.inputContainer,
             id: 'password',
             name: 'password',

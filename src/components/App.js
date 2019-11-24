@@ -1,10 +1,12 @@
 import Aside from '../containers/Aside';
 import LoginContainer from  '../containers/Login-container';
+import PrivateRoute from '../containers/Private-route'
 import React, { Component, Fragment } from 'react';
+import SelectPizzaPage from '../containers/select-pizza-page'
 import { connect } from 'react-redux';
 import { fetchData } from '../store/actions/actions';
 import { BrowserRouter } from 'react-router-dom';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import '../css/App.scss';
 
 class App extends Component {
@@ -24,7 +26,9 @@ class App extends Component {
             <Aside />
             <Switch>
               <Route exact path='/login' component={LoginContainer} />
-              <Redirect strict from="/" to="/login" />
+              <PrivateRoute>
+                <Route path='/select' component={SelectPizzaPage} />
+              </PrivateRoute>
             </Switch>
           </main>
         </Fragment>
