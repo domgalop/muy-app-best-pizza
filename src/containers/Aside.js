@@ -1,13 +1,35 @@
 import React from 'react';
+import logoBestPizza from '../assets/logo.png';
 import pizzaImage from '../assets/pizza.png';
 import '../css/Aside.scss';
 
-const Aside = () => {
+const Aside = props => {
   return (
     <aside {...getAsideProps()}>
-        <img {...getImageProps()}/>
+        {renderIconLog(props)}
+        <img {...getAsideImageProps()}/>
     </aside>
   );
+};
+
+const renderIconLog = props => {
+  let component = null;
+
+  if (!props.showIconLogo) {
+    component = (
+      <img {...getLogoProps()}/>
+    );
+  }
+
+  return component;
+};
+
+const getLogoProps = () => {
+  return {
+    alt: '',
+    className:'aside__image__logo',
+    src: logoBestPizza
+  };
 };
 
 const getAsideProps = () => {
@@ -17,7 +39,7 @@ const getAsideProps = () => {
   };
 };
 
-const getImageProps = () => {
+const getAsideImageProps = () => {
   return {
     alt: '',
     className:'aside__image',

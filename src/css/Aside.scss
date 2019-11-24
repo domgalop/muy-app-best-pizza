@@ -1,5 +1,6 @@
 .aside {
     grid-area: aside;
+    position: relative;
 
     &__image{
         background-image: url("../assets/imagebkg.png");
@@ -8,5 +9,12 @@
         height: 100vh;
         object-fit: contain;
         width: 100%;
+
+        &__logo {
+            left: 20%;
+            position: absolute;
+            top: 7%;
+            width: 100px;
+        }
     }
 }

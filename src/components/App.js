@@ -3,13 +3,16 @@ import LoginContainer from  '../containers/Login-container';
 import PrivateRoute from '../containers/Private-route'
 import React, { Component, Fragment } from 'react';
 import SelectPizzaPage from '../containers/select-pizza-page'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchData } from '../store/actions/actions';
-import { BrowserRouter } from 'react-router-dom';
-import { Route, Switch } from 'react-router-dom';
 import '../css/App.scss';
 
 class App extends Component {
+
+  state = {
+    showIconLogo: false
+  }
 
   componentDidMount (){
     this.props.fetchData();
@@ -23,9 +26,9 @@ class App extends Component {
             <h1>Best pizza website</h1>
           </header>
           <main className='wrapper'>
-            <Aside />
+            <Aside showIconLogo={this.state.showIconLogo} />
             <Switch>
-              <Route exact path='/login' component={LoginContainer} />
+              <Route exact path='/login' render={this.renderSelectPage()} />
               <PrivateRoute>
                 <Route path='/select' component={SelectPizzaPage} />
               </PrivateRoute>
@@ -34,6 +37,16 @@ class App extends Component {
         </Fragment>
       </BrowserRouter>
     );
+  };
+
+  changeShowIconLogo() {
+    this.setState({
+      showIconLogo: true
+    });
+  };
+
+  renderSelectPage() {
+    return (props) => <LoginContainer {...props} changeShowIconLogo={this.changeShowIconLogo.bind(this)} />
   };
 };
 

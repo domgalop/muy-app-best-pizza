@@ -15,6 +15,7 @@ class InputLogin extends Component {
     navigateToSelectPage() {
         this.props.checkUser();
         this.props.routerPush.push('/select/');
+        this.props.changeShowIconLogo();
     }
 };
 
