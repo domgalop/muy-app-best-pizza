@@ -4,9 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 how to use MUY
 
-use 
-
-first change to the develop and then run
+first change to the develop branch and then run
 
 ### `npm install`
 
