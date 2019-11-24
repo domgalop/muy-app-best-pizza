@@ -15,7 +15,7 @@ const Aside = props => {
 const renderIconLog = props => {
   let component = null;
 
-  if (!props.showIconLogo) {
+  if (props.showIconLogo) {
     component = (
       <img {...getLogoProps()}/>
     );

@@ -1,3 +1,5 @@
+@import '../utils/base/base.scss';
+
 .aside {
     grid-area: aside;
     position: relative;
@@ -15,6 +17,10 @@
             position: absolute;
             top: 7%;
             width: 100px;
+
+            @media (max-width: $mid-screen) {
+                display: none;
+            }
         }
     }
 }

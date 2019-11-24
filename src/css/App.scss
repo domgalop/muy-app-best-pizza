@@ -15,9 +15,4 @@
         grid-template-areas: "page";
         grid-template-columns: 100%;
     }
-
-    @media (min-width: $extra-large-screen) {
-        width: 80%;
-        margin: 0 auto;
-    }
 }

@@ -1,12 +1,11 @@
 import CardInfo from './Card-info';
 import React from 'react';
-import storeInfo from '../utils/storesInfo/stores-info';
 import '../css/Stores-container.sass';
 
 const StoreContainer = props => {
   return (
     <div className={props.className}>
-        {renderStoresContainer(storeInfo)}
+        {renderStoresContainer(props.storeInfo)}
     </div>
   );
 };
