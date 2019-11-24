@@ -2,7 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+how to use MUY
+
+use 
+
+first change to the develop and then run
+
+### `npm install`
 
 ### `npm start`
 
